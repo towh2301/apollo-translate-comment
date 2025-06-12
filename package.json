@@ -1,21 +1,30 @@
 {
-  "name": "apollo-translate-comment",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "dependencies": {
-    "apollo-translate-comment": "file:",
-    "puppeteer": "^24.4.0",
-    "puppeteer-core": "^24.4.0"
-  },
-  "devDependencies": {
-    "@types/node": "^22.13.14",
-    "typescript": "^5.8.2"
-  }
+	"name": "apollo-translate-comment",
+	"version": "1.0.0",
+	"main": "index.js",
+	"scripts": {
+		"build": "tsc",
+		"start": "node dist/translate-comment.js",
+		"cli": "node dist/cli.js",
+		"dev": "ts-node src/translate-comment.ts",
+		"dev-cli": "ts-node src/cli.ts",
+		"test": "ts-node src/test.ts",
+		"test:build": "npm run build && node dist/test.js"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"description": "",
+	"dependencies": {
+		"@google-cloud/translate": "^9.1.0",
+		"apollo-translate-comment": "file:",
+		"axios": "^1.9.0",
+		"puppeteer": "^24.4.0",
+		"puppeteer-core": "^24.4.0"
+	},
+	"devDependencies": {
+		"@types/node": "^22.13.14",
+		"ts-node": "^10.9.2",
+		"typescript": "^5.8.2"
+	}
 }
